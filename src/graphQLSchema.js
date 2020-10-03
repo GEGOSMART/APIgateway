@@ -5,24 +5,74 @@ import { makeExecutableSchema } from 'graphql-tools';
 import { mergeSchemas } from './utilities';
 
 import {
-	categoryMutations,
-	categoryQueries,
-	categoryTypeDef
-} from './geosmart/categories/typeDefs';
+	colorMutations,
+	colorQueries,
+	colorTypeDef
+} from './geosmart/geosupport/colors/typeDefs';
 
-import categoryResolvers from './geosmart/categories/resolvers';
+import {
+	color_flagMutations,
+	color_flagQueries,
+	color_flagTypeDef
+} from './geosmart/geosupport/color_flags/typeDefs';
+
+import {
+	countryMutations,
+	countryQueries,
+	countryTypeDef
+} from './geosmart/geosupport/countries/typeDefs';
+
+import {
+	continentMutations,
+	continentQueries,
+	continentTypeDef
+} from './geosmart/geosupport/continents/typeDefs';
+
+import {
+	flagMutations,
+	flagQueries,
+	flagTypeDef
+} from './geosmart/geosupport/flags/typeDefs';
+
+import {
+	placeMutations,
+	placeQueries,
+	placeTypeDef
+} from './geosmart/geosupport/places/typeDefs';
+
+import colorResolvers from './geosmart/geosupport/colors/resolvers';
+import color_flagResolvers from './geosmart/geosupport/color_flags/resolvers';
+import countryResolvers from './geosmart/geosupport/countries/resolvers';
+import continentResolvers from './geosmart/geosupport/continents/resolvers';
+import flagResolvers from './geosmart/geosupport/flags/resolvers';
+import placeResolvers from './geosmart/geosupport/places/resolvers';
 
 // merge the typeDefs
 const mergedTypeDefs = mergeSchemas(
 	[
 		'scalar JSON',
-		categoryTypeDef
+		colorTypeDef,
+		color_flagTypeDef,
+		countryTypeDef,
+		continentTypeDef,
+		flagTypeDef,
+		placeTypeDef
 	],
 	[
-		categoryQueries
+		colorQueries,
+		color_flagQueries,
+		countryQueries,
+		continentQueries,
+		flagQueries,
+		placeQueries
 	],
 	[
-		categoryMutations
+		colorMutations,
+		color_flagMutations,
+		countryMutations,
+		continentMutations,
+		flagMutations,
+		placeMutations
 	]
 );
 
@@ -31,6 +81,12 @@ export default makeExecutableSchema({
 	typeDefs: mergedTypeDefs,
 	resolvers: merge(
 		{ JSON: GraphQLJSON }, // allows scalar JSON
-		categoryResolvers
+		colorResolvers,
+		color_flagResolvers,
+		countryResolvers,
+		continentResolvers,
+		flagResolvers,
+		placeResolvers
+		
 	)
 });
