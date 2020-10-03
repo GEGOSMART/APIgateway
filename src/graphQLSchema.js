@@ -22,9 +22,16 @@ import {
 	countryTypeDef
 } from './geosmart/geosupport/countries/typeDefs';
 
+import {
+	continentMutations,
+	continentQueries,
+	continentTypeDef
+} from './geosmart/geosupport/continents/typeDefs';
+
 import colorResolvers from './geosmart/geosupport/colors/resolvers';
 import color_flagResolvers from './geosmart/geosupport/color_flags/resolvers';
 import countryResolvers from './geosmart/geosupport/countries/resolvers';
+import continentResolvers from './geosmart/geosupport/continents/resolvers';
 
 // merge the typeDefs
 const mergedTypeDefs = mergeSchemas(
@@ -32,17 +39,20 @@ const mergedTypeDefs = mergeSchemas(
 		'scalar JSON',
 		colorTypeDef,
 		color_flagTypeDef,
-		countryTypeDef
+		countryTypeDef,
+		continentTypeDef
 	],
 	[
 		colorQueries,
 		color_flagQueries,
-		countryQueries
+		countryQueries,
+		continentQueries
 	],
 	[
 		colorMutations,
 		color_flagMutations,
-		countryMutations
+		countryMutations,
+		continentMutations
 	]
 );
 
@@ -53,6 +63,7 @@ export default makeExecutableSchema({
 		{ JSON: GraphQLJSON }, // allows scalar JSON
 		colorResolvers,
 		color_flagResolvers,
-		countryResolvers
+		countryResolvers,
+		continentResolvers
 	)
 });
