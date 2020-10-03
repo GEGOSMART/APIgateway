@@ -1,14 +1,14 @@
 FROM node:carbon-slim
 
 # Create app directory
-WORKDIR /geosupport_api
+WORKDIR /geosmart_api
 
 # Install app dependencies
-COPY package.json /geosupport_api/
+COPY package.json /geosmart_api/
 RUN npm install
 
 # Bundle app source
-COPY . /geosupport_api/
+COPY . /geosmart_api/
 RUN npm run prepublish
 
 CMD [ "npm", "run", "runServer" ]
