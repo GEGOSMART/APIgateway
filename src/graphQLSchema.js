@@ -28,10 +28,17 @@ import {
 	continentTypeDef
 } from './geosmart/geosupport/continents/typeDefs';
 
+import {
+	flagMutations,
+	flagQueries,
+	flagTypeDef
+} from './geosmart/geosupport/flags/typeDefs';
+
 import colorResolvers from './geosmart/geosupport/colors/resolvers';
 import color_flagResolvers from './geosmart/geosupport/color_flags/resolvers';
 import countryResolvers from './geosmart/geosupport/countries/resolvers';
 import continentResolvers from './geosmart/geosupport/continents/resolvers';
+import flagResolvers from './geosmart/geosupport/flags/resolvers';
 
 // merge the typeDefs
 const mergedTypeDefs = mergeSchemas(
@@ -40,19 +47,22 @@ const mergedTypeDefs = mergeSchemas(
 		colorTypeDef,
 		color_flagTypeDef,
 		countryTypeDef,
-		continentTypeDef
+		continentTypeDef,
+		flagTypeDef
 	],
 	[
 		colorQueries,
 		color_flagQueries,
 		countryQueries,
-		continentQueries
+		continentQueries,
+		flagQueries
 	],
 	[
 		colorMutations,
 		color_flagMutations,
 		countryMutations,
-		continentMutations
+		continentMutations,
+		flagMutations
 	]
 );
 
@@ -64,6 +74,8 @@ export default makeExecutableSchema({
 		colorResolvers,
 		color_flagResolvers,
 		countryResolvers,
-		continentResolvers
+		continentResolvers,
+		flagResolvers
+		
 	)
 });

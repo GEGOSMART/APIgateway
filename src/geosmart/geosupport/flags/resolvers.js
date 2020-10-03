@@ -1,22 +1,22 @@
 import { generalRequest, getRequest } from '../../../utilities';
 import { url, port, entryPoint } from '../server';
 
-const URL = `http://${url}:${port}/${entryPoint}/Color`;
+const URL = `http://${url}:${port}/${entryPoint}/Flag`;
 
 const resolvers = {
 	Query: {
-		allColors: (_) =>
+		allFlags: (_) =>
 			getRequest(URL, ''),
-		colorById: (_, { id_color }) =>
-			generalRequest(`${URL}/${id_color}`, 'GET'),
+		flagById: (_, { id_flag }) =>
+			generalRequest(`${URL}/${id_flag}`, 'GET'),
 	},
 	Mutation: {
-		createColor: (_, { color }) =>
-			generalRequest(`${URL}/`, 'POST', color),
-		updateColor: (_, { id_color, color }) =>
-			generalRequest(`${URL}/${id_color}`, 'PUT', color),
-		deleteColor: (_, { id_color }) =>
-			generalRequest(`${URL}/${id_color}`, 'DELETE')
+		createFlag: (_, { flag }) =>
+			generalRequest(`${URL}/`, 'POST', flag),
+		updateFlag: (_, { id_flag, flag }) =>
+			generalRequest(`${URL}/${id_flag}`, 'PUT', flag),
+		deleteFlag: (_, { id_flag }) =>
+			generalRequest(`${URL}/${id_flag}`, 'DELETE')
 	}
 };
 

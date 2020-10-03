@@ -1,22 +1,20 @@
-export const colorTypeDef = `
-  type Color {
-      id_color: Int!
-      name: String!
-      hexCode: String!
-      flags: [String]
+export const flagTypeDef = `
+  type Flag {
+      id_flag: Int!
+      flagImage: String!
+      colors: [String]
   }
-  input ColorInput {
-      name: String!
-      hexCode: String!
+  input FlagInput {
+      flagImage: String!
   }`;
 
-export const colorQueries = `
-      allColors: [Color]!
-      colorById(id_color: Int!): Color!
+export const flagQueries = `
+      allFlags: [Flag]!
+      flagById(id_flag: Int!): Flag!
   `;
 
-export const colorMutations = `
-    createColor(color: ColorInput!): Color!
-    updateColor(id_color: Int!, color: ColorInput!): Color!
-    deleteColor(id_color: Int!): Int
+export const flagMutations = `
+    createFlag(flag: FlagInput!): Flag!
+    updateFlag(id_flag: Int!, flag: FlagInput!): Flag!
+    deleteFlag(id_flag: Int!): Int
 `;
