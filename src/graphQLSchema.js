@@ -8,9 +8,9 @@ import {
 	categoryMutations,
 	categoryQueries,
 	categoryTypeDef
-} from './supermarket/categories/typeDefs';
+} from './geosupport/categories/typeDefs';
 
-import categoryResolvers from './supermarket/categories/resolvers';
+import categoryResolvers from './geosupport/categories/resolvers';
 
 // merge the typeDefs
 const mergedTypeDefs = mergeSchemas(
