@@ -10,19 +10,29 @@ import {
 	colorTypeDef
 } from './geosmart/geosupport/colors/typeDefs';
 
+import {
+	color_flagMutations,
+	color_flagQueries,
+	color_flagTypeDef
+} from './geosmart/geosupport/color_flags/typeDefs';
+
 import colorResolvers from './geosmart/geosupport/colors/resolvers';
+import color_flagResolvers from './geosmart/geosupport/color_flags/resolvers';
 
 // merge the typeDefs
 const mergedTypeDefs = mergeSchemas(
 	[
 		'scalar JSON',
-		colorTypeDef
+		colorTypeDef,
+		color_flagTypeDef
 	],
 	[
-		colorQueries
+		colorQueries,
+		color_flagQueries
 	],
 	[
-		colorMutations
+		colorMutations,
+		color_flagMutations
 	]
 );
 
@@ -31,6 +41,7 @@ export default makeExecutableSchema({
 	typeDefs: mergedTypeDefs,
 	resolvers: merge(
 		{ JSON: GraphQLJSON }, // allows scalar JSON
-		colorResolvers
+		colorResolvers,
+		color_flagResolvers
 	)
 });
