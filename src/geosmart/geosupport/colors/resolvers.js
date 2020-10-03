@@ -1,5 +1,5 @@
-import { generalRequest, getRequest } from '../../utilities';
-import { url, port, entryPoint } from './server';
+import { generalRequest, getRequest } from '../../../utilities';
+import { url, port, entryPoint } from '../server';
 
 const URL = `http://${url}:${port}/${entryPoint}/Color`;
 
@@ -13,9 +13,9 @@ const resolvers = {
 	Mutation: {
 		createColor: (_, { color }) =>
 			generalRequest(`${URL}/`, 'POST', color),
-		updateCategory: (_, { id, color }) =>
+		updateColor: (_, { id, color }) =>
 			generalRequest(`${URL}/${id}`, 'PUT', color),
-		deleteCategory: (_, { id }) =>
+		deleteColor: (_, { id }) =>
 			generalRequest(`${URL}/${id}`, 'DELETE')
 	}
 };

@@ -1,20 +1,22 @@
-export const categoryTypeDef = `
-  type Category {
-      id: Int!
+export const colorTypeDef = `
+  type Color {
+      id_color: Int!
       name: String!
+      hexCode: String!
+      flags: [String]
   }
-  input CategoryInput {
+  input ColorInput {
       name: String!
-      description: String!
+      hexCode: String!
   }`;
 
-export const categoryQueries = `
-      allCategories: [Category]!
-      categoryById(id: Int!): Category!
+export const colorQueries = `
+      allColors: [Color]!
+      colorById(id_color: Int!): Color!
   `;
 
-export const categoryMutations = `
-    createCategory(category: CategoryInput!): Category!
-    updateCategory(id: Int!, category: CategoryInput!): Category!
-    deleteCategory(id: Int!): Int
+export const colorMutations = `
+    createColor(color: ColorInput!): Color!
+    updateColor(id_color: Int!, color: ColorInput!): Color!
+    deleteColor(id_color: Int!): Int
 `;

@@ -5,24 +5,24 @@ import { makeExecutableSchema } from 'graphql-tools';
 import { mergeSchemas } from './utilities';
 
 import {
-	categoryMutations,
-	categoryQueries,
-	categoryTypeDef
-} from './geosmart/categories/typeDefs';
+	colorMutations,
+	colorQueries,
+	colorTypeDef
+} from './geosmart/geosupport/colors/typeDefs';
 
-import categoryResolvers from './geosmart/categories/resolvers';
+import colorResolvers from './geosmart/geosupport/colors/resolvers';
 
 // merge the typeDefs
 const mergedTypeDefs = mergeSchemas(
 	[
 		'scalar JSON',
-		categoryTypeDef
+		colorTypeDef
 	],
 	[
-		categoryQueries
+		colorQueries
 	],
 	[
-		categoryMutations
+		colorMutations
 	]
 );
 
@@ -31,6 +31,6 @@ export default makeExecutableSchema({
 	typeDefs: mergedTypeDefs,
 	resolvers: merge(
 		{ JSON: GraphQLJSON }, // allows scalar JSON
-		categoryResolvers
+		colorResolvers
 	)
 });
