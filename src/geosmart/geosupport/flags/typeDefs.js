@@ -2,7 +2,7 @@ export const flagTypeDef = `
   type Flag {
       id_flag: Int!
       flagImage: String!
-      colors: [String]
+      colors: [Color]
   }
   input FlagInput {
       flagImage: String!
