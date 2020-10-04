@@ -7,6 +7,8 @@ const READ = `read.php`;
 
 const GETUSER = `getbestscorebyuser.php`;
 
+const CREATE = `getrecordsofgame.php`;
+
 const resolvers = {
 	Query: {
 		allScores: (_) =>
@@ -18,7 +20,7 @@ const resolvers = {
 	},
 	Mutation: {
 		createScore: (_, { score }) =>
-			generalRequest(`${URL}/create.php`, 'POST', score),
+			generalRequest(`${URL}/${CREATE}`, 'POST', score),
 		updateScore: (_, { ID, ID_User, Score, DatePlayed, ID_Game }) =>
 			generalRequest(`${URL}/update.php`, 'PUT', score),
 		deleteScore: (_, { ID }) =>
