@@ -3,10 +3,12 @@ import { url, port, entryPoint } from '../server';
 
 const URL = `http://${url}:${port}/`;
 
+const READ = `read.php`;
+
 const resolvers = {
 	Query: {
 		allScores: (_) =>
-			getRequest(`${URL}/read.php`, ''),
+			getRequest(`${URL}/${READ}`, ''),
 		bestScoreByUserandGame: (_, { ID_User, ID_Game}) =>
 			generalRequest(`${URL}/getbestscorebyuser.php`, 'GET'),
 		bestScoreByGame: (_, { ID_Game}) =>
@@ -17,7 +19,7 @@ const resolvers = {
 			generalRequest(`${URL}/create.php`, 'POST', score),
 		updateScore: (_, { ID, ID_User, Score, DatePlayed, ID_Game }) =>
 			generalRequest(`${URL}/update.php`, 'PUT', score),
-		deleteColor_Flag: (_, { ID }) =>
+		deleteScore: (_, { ID }) =>
 			generalRequest(`${URL}/delete.php`, 'DELETE')
 	}
 };
