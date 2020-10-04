@@ -6,7 +6,7 @@ export const scoreTypeDef = `
       DatePlayed: String!
       ID_Game: Int!
   }
-  records{
+  type records{
       [score]	
   }
   input scoreInput {
