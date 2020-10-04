@@ -5,12 +5,14 @@ const URL = `http://${url}:${port}/`;
 
 const READ = `read.php`;
 
+const GETUSER = `getbestscorebyuser.php`;
+
 const resolvers = {
 	Query: {
 		allScores: (_) =>
-			getRequest(`${URL}/${READ}`, ''),
+			getRequest(`${URL}/${READ}`, 'GET'),
 		bestScoreByUserandGame: (_, { ID_User, ID_Game}) =>
-			generalRequest(`${URL}/getbestscorebyuser.php`, 'GET'),
+			generalRequest(`${URL}/${GETUSER}`, 'GET'),
 		bestScoreByGame: (_, { ID_Game}) =>
 			generalRequest(`${URL}/getrecordsofgame.php`, 'GET'),
 	},
