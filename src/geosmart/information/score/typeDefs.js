@@ -6,6 +6,9 @@ export const scoreTypeDef = `
       DatePlayed: String!
       ID_Game: Int!
   }
+  type response{
+      message: String!  
+  }
   input scoreInput {
       ID_User: Int!
       Score: Int!
@@ -15,12 +18,12 @@ export const scoreTypeDef = `
 
 export const scoreQueries = `
       allScores: [score]!
-      bestScoreByUserandGame(ID_User: Int!, ID_Game: Int!): score!
+      bestScoreByUserandGame(ID_User: Int!, ID_Game: Int!): [score]!
       bestScoreByGame(ID_Game: Int!): [score]!
   `;
 
 export const scoreMutations = `
-    createScore(score: scoreInput!): score!
-    updateScore(ID: Int!, records: scoreInput!): score!
+    createScore(score: scoreInput!): response!
+    updateScore(ID: Int!, records: scoreInput!): response!
     deleteScore(ID: Int!): Int
 `;
