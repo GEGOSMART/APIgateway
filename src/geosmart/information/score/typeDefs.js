@@ -13,13 +13,13 @@ export const scoreTypeDef = `
       ID_Game: Int!
   }`;
 
-export const color_flagQueries = `
+export const scoreQueries = `
       allScores: [Score]!
       bestScoreByUserandGame(ID_User: Int!, ID_Game: Int!): [Score]!
       bestScoreByGame(ID_Game: Int!): [Score]!
   `;
 
-export const color_flagMutations = `
+export const scoreMutations = `
     createScore(score: Score!): Score!
     updateScore(ID: Int!, score: Score!): Score!
     deleteScore(ID: Int!): Int
