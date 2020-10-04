@@ -19,8 +19,8 @@ const resolvers = {
 			generalRequest(`${URL}/getrecordsofgame.php`, 'GET'),
 	},
 	Mutation: {
-		createScore: (_, { records }) =>
-			generalRequest(`${URL}/${CREATE}`, 'POST', records),
+		createScore: (_, { score }) =>
+			generalRequest(`${URL}/${CREATE}`, 'POST', score),
 		//updateScore: (_, { ID, ID_User, Score, DatePlayed, ID_Game }) =>
 			//generalRequest(`${URL}/update.php`, 'PUT', score),
 		//deleteScore: (_, { ID }) =>
