@@ -3,7 +3,7 @@ export const scoreTypeDef = `
       ID: Int!
       ID_User: Int!
       Score: Int!
-      DatePlayed: DateTime!
+      DatePlayed: String!
       ID_Game: Int!
   }
   input scoreInput {
