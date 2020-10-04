@@ -15,12 +15,12 @@ export const scoreTypeDef = `
 
 export const scoreQueries = `
       allScores: [records]!
-      bestScoreByUserandGame(ID_User: Int!, ID_Game: Int!): score!
-      bestScoreByGame(ID_Game: Int!): [score]!
+      bestScoreByUserandGame(ID_User: Int!, ID_Game: Int!): records!
+      bestScoreByGame(ID_Game: Int!): [records]!
   `;
 
 export const scoreMutations = `
-    createScore(score: scoreInput!): score!
-    updateScore(ID: Int!, score: scoreInput!): score!
+    createScore(records: scoreInput!): records!
+    updateScore(ID: Int!, records: scoreInput!): records!
     deleteScore(ID: Int!): Int
 `;
