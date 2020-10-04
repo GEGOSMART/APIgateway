@@ -1,13 +1,13 @@
 export const scoreTypeDef = `
   type score {
-      ID: Int!
-      ID_User: Int!
-      Score: Int!
+      ID: String!
+      ID_User: String!
+      Score: String!
       DatePlayed: String!
-      ID_Game: Int!
+      ID_Game: String!
   }
   type records {
-      [score]!	
+      score: [score]!	
   }
   input scoreInput {
       ID_User: Int!
