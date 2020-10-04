@@ -10,7 +10,7 @@ const GETUSER = `getbestscorebyuser.php`;
 const resolvers = {
 	Query: {
 		allScores: (_) =>
-			getRequest(`${URL}/${READ}`, 'GET'),
+			generalRequest(`${URL}/${GETUSER}`, 'GET'),
 		bestScoreByUserandGame: (_, { ID_User, ID_Game}) =>
 			generalRequest(`${URL}/${GETUSER}`, 'GET'),
 		bestScoreByGame: (_, { ID_Game}) =>
