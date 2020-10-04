@@ -6,6 +6,9 @@ export const scoreTypeDef = `
       DatePlayed: String!
       ID_Game: Int!
   }
+  records{
+      [score]	
+  }
   input scoreInput {
       ID_User: Int!
       Score: Int!
@@ -14,7 +17,7 @@ export const scoreTypeDef = `
   }`;
 
 export const scoreQueries = `
-      allScores: [score]
+      allScores: records
       bestScoreByUserandGame(ID_User: Int!, ID_Game: Int!): score!
       bestScoreByGame(ID_Game: Int!): [score]!
   `;
