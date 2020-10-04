@@ -1,13 +1,10 @@
 export const scoreTypeDef = `
   type score {
-      ID: String!
-      ID_User: String!
-      Score: String!
+      ID: Int!
+      ID_User: Int!
+      Score: Int!
       DatePlayed: String!
-      ID_Game: String!
-  }
-  type records {
-      score: [score]!	
+      ID_Game: Int!
   }
   input scoreInput {
       ID_User: Int!
@@ -17,7 +14,7 @@ export const scoreTypeDef = `
   }`;
 
 export const scoreQueries = `
-      allScores: records!
+      allScores: [score]!
       bestScoreByUserandGame(ID_User: Int!, ID_Game: Int!): score!
       bestScoreByGame(ID_Game: Int!): [score]!
   `;
