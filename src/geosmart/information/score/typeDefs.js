@@ -15,7 +15,7 @@ export const scoreTypeDef = `
 
 export const scoreQueries = `
       allScores: score!
-      bestScoreByUserandGame(ID_User: Int!, ID_Game: Int!): [score]!
+      bestScoreByUserandGame(ID_User: Int!, ID_Game: Int!): score!
       bestScoreByGame(ID_Game: Int!): [score]!
   `;
 
