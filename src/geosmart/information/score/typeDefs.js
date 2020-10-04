@@ -7,7 +7,7 @@ export const scoreTypeDef = `
       ID_Game: Int!
   }
   type records {
-      scores: [score]!	
+      [score]!	
   }
   input scoreInput {
       ID_User: Int!
