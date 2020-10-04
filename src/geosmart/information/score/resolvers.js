@@ -7,7 +7,7 @@ const READ = `read.php`;
 
 const GETUSER = `getbestscorebyuser.php`;
 
-const CREATE = `getrecordsofgame.php`;
+const CREATE = `create.php`;
 
 const resolvers = {
 	Query: {
