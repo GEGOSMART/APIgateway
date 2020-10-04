@@ -9,7 +9,7 @@ export const scoreTypeDef = `
   input scoreInput {
       ID_User: Int!
       Score: Int!
-      DatePlayed: DateTime!
+      DatePlayed: String!
       ID_Game: Int!
   }`;
 
