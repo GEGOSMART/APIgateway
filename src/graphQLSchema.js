@@ -62,12 +62,15 @@ import {
   gamesTypeDef,
 } from './geosmart/geogames/questions/typeDefs';
 
+<<<<<<< HEAD
 //information typeDefs
 import {
   scoreMutations,
   scoreQueries,
   scoreTypeDef
 } from './geosmart/information/score/typeDefs';
+=======
+>>>>>>> 3a635bf8ef5d1899ed6089b001f3a791ab918c26
 
 // geosupport resolvers
 
@@ -86,9 +89,12 @@ import guestResolvers from './geosmart/userManagement/guest/resolver';
 // geogames resolvers
 import gameResolvers from './geosmart/geogames/questions/resolver';
 
+<<<<<<< HEAD
 //information resolvers
 import scoreResolvers from './geosmart/information/score/resolvers';
 
+=======
+>>>>>>> 3a635bf8ef5d1899ed6089b001f3a791ab918c26
 // merge the typeDefs
 const mergedTypeDefs = mergeSchemas(
   [
@@ -105,8 +111,12 @@ const mergedTypeDefs = mergeSchemas(
     guestTypeDef,
     //geogames
     gamesTypeDef,
+<<<<<<< HEAD
     //information
     scoreTypeDef
+=======
+    //...
+>>>>>>> 3a635bf8ef5d1899ed6089b001f3a791ab918c26
   ],
   [
     // geosupport
@@ -120,8 +130,12 @@ const mergedTypeDefs = mergeSchemas(
     userQueries,
     //geogames
     gameQueries,
+<<<<<<< HEAD
     //information
     scoreQueries
+=======
+    //..
+>>>>>>> 3a635bf8ef5d1899ed6089b001f3a791ab918c26
   ],
   [
     // geosupport
@@ -156,7 +170,10 @@ export default makeExecutableSchema({
     userResolvers,
     // geogames
     gameResolvers,
+<<<<<<< HEAD
     //information
     scoreResolvers
+=======
+>>>>>>> 3a635bf8ef5d1899ed6089b001f3a791ab918c26
   ),
 });

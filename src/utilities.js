@@ -29,6 +29,30 @@ export async function generalRequest(url, method, body, fullResponse) {
 	}
 }
 
+export async function requestParseBody(url, method, body, fullResponse) {
+	const parameters = {
+		method,
+		uri: encodeURI(url),
+		body,
+		json: true,
+		resolveWithFullResponse: fullResponse
+	};
+	if (process.env.SHOW_URLS) {
+		// eslint-disable-next-line
+		console.log(url);
+	}
+	console.log(parameters);
+	try {
+		var response =  await request(parameters);
+		response = response.body;
+		console.log(response);
+		return response ;
+	} catch (err) {
+		return err;
+	}
+}
+
+
 /**
  * Adds parameters to a given route
  * @param {string} url
