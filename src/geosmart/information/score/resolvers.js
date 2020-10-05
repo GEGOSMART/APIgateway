@@ -22,7 +22,7 @@ const resolvers = {
 		bestScoreByUserandGame: (_, { ID_User, ID_Game}) =>
 			generalRequest(`${URL}/${GETUSER}`, 'GET', { ID_User, ID_Game}),
 		bestScoreByGame: (_, { ID_Game}) =>
-			generalRequest(`${URL}/${GETRECORDS}`, 'GET'),
+			generalRequest(`${URL}/${GETRECORDS}`, 'GET', { ID_Game}),
 	},
 	Mutation: {
 		createScore: (_, { score }) =>
