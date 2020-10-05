@@ -10,7 +10,9 @@ export const userTypeDef = `
     created_at: String!
     token: String!
   }
-  
+  type Response {
+    message: String!  
+  }
   input CreateUserInput {
     firstname: String!
     lastname: String!
@@ -41,8 +43,8 @@ export const userQueries = `
 `;
 
 export const userMutations = `
-  createUser(user: CreateUserInput!): String
+  createUser(user: CreateUserInput!): Response!
   loginUser(user: LoginUserInput!): User!
   updateUser(id: ID!, user: UpdateUserInput!): User!
-  deleteUser(id: ID!): String! 
+  deleteUser(id: ID!):Response! 
 `;
