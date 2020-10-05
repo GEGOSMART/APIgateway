@@ -27,8 +27,8 @@ const resolvers = {
 	Mutation: {
 		createScore: (_, { score }) =>
 			generalRequest(`${URL}/${CREATE}`, 'POST', score),
-		updateScore: (_, { ID, score }) =>
-			generalRequest(`${URL}/${UPDATE}`, 'PUT', { ID, score }),
+		updateScore: (_, { ID, ID_User, Score, DatePlayed, ID_Game }) =>
+			generalRequest(`${URL}/${UPDATE}`, 'PUT', { ID, ID_User, Score, DatePlayed, ID_Game }),
 		deleteScore: (_, { ID }) =>
 			generalRequest(`${URL}/${DELETE}`, 'DELETE', { ID })
 	}
