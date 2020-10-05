@@ -25,5 +25,5 @@ export const scoreQueries = `
 export const scoreMutations = `
     createScore(score: scoreInput!): response!
     updateScore(ID: Int!, ID_User: Int!, Score: Int!, DatePlayed: String!, ID_Game: Int!): response!
-    deleteScore(ID: Int!): Int
+    deleteScore(ID: Int!): response!
 `;
