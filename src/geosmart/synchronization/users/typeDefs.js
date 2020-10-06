@@ -1,4 +1,6 @@
 export const usersTypeDef = `
+  scalar Object
+  
   input Nickname {
     nickname: String!
   }
