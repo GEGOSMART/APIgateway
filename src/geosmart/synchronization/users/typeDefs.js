@@ -9,7 +9,7 @@ export const usersTypeDef = `
   input NicknameKeyData {
     nickname: String!
     key: String!
-    data: Object!
+    data: JSON!
   }`;
 
 export const usersQueries = ``;
