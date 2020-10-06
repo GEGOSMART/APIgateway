@@ -1,5 +1,5 @@
 import { generalRequest } from "../../../utilities";
-import { url, port, entryPoint } from "../server";
+import { url, port } from "../server";
 
 const URL = `http://${url}:${port}/users`;
 
