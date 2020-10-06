@@ -109,6 +109,7 @@ import synchronizationUsersResolvers from "./geosmart/synchronization/users/reso
 const mergedTypeDefs = mergeSchemas(
   [
     "scalar JSON",
+    "scalar Object",
     // geosupport
     colorTypeDef,
     color_flagTypeDef,

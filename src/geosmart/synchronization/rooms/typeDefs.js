@@ -1,6 +1,4 @@
 export const roomsTypeDef = `
-  scalar Object
-  
   input RoomInput {
     roomName: String!
     key: String!
