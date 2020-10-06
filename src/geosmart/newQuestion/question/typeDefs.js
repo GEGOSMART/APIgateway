@@ -1,5 +1,5 @@
 export const questionTypeDef = `
-    type Question {
+    type Nquestion {
         _id: String
         statement: String
         image:    String
@@ -15,7 +15,7 @@ export const questionTypeDef = `
         creator: String
     }
 
-    input QuestionInput{
+    input NquestionInput{
         statement: String
         image:    String
         optionA:  String
@@ -36,7 +36,7 @@ export const questionQueries = `
 `;
 
 export const questionMutations = `
-    createQuestion(question: Question!): Question!
-    updateQuestion(id: Int!, question: Question!): Question!
+    createQuestion(nquestion: Nquestion!): Nquestion!
+    updateQuestion(id: Int!, nquestion: Nquestion!): Nquestion!
     deleteQuestion(id: Int!): String!
 `;
