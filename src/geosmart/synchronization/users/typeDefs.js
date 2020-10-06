@@ -9,7 +9,7 @@ export const usersTypeDef = `
   input NicknameKeyData {
     nickname: String!
     key: String!
-    data: Episode!
+    data: Object!
   }`;
 
 export const usersQueries = ``;
