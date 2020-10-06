@@ -36,7 +36,7 @@ export const questionQueries = `
 `;
 
 export const questionMutations = `
-    createQuestion(nquestion: Nquestion!): Nquestion!
-    updateQuestion(id: Int!, nquestion: Nquestion!): Nquestion!
+    createQuestion(nquestion: NquestionInput!): Nquestion!
+    updateQuestion(id: Int!, nquestion: NquestionInput!): Nquestion!
     deleteQuestion(id: Int!): String!
 `;
