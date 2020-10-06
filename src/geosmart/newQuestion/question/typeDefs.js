@@ -15,6 +15,10 @@ export const questionTypeDef = `
         creator: String
     }
 
+    type Res{
+        msg :String
+    }
+
     input NquestionInput{
         statement: String
         image:    String
@@ -36,7 +40,7 @@ export const questionQueries = `
 `;
 
 export const questionMutations = `
-    createQuestion(nquestion: NquestionInput!): Nquestion!
-    updateQuestion(id: Int!, nquestion: NquestionInput!): Nquestion!
-    deleteQuestion(id: Int!): String!
+    createQuestion(nquestion: NquestionInput!): Res!
+    updateQuestion(id: Int!, nquestion: NquestionInput!): Res!
+    deleteQuestion(id: Int!): Res!
 `;
