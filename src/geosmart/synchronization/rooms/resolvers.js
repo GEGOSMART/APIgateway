@@ -6,9 +6,9 @@ const URL = `http://${url}:${port}/rooms`;
 const resolvers = {
   Query: {},
   Mutation: {
-    sendData: (_, { roomInput }) =>
+    sendRoomData: (_, { roomInput }) =>
       generalRequest(`${URL}/send-data`, "POST", roomInput),
-    addData: (_, { roomInput }) =>
+    addRoomData: (_, { roomInput }) =>
       generalRequest(`${URL}/add-data`, "POST", roomInput),
   },
 };

@@ -8,6 +8,6 @@ export const roomsTypeDef = `
 export const roomsQueries = ``;
 
 export const roomsMutations = `
-    sendData(roomInput: RoomInput!): String!
-    addData(roomInput: RoomInput!): String!
+    sendRoomData(roomInput: RoomInput!): String!
+    addRoomData(roomInput: RoomInput!): String!
 `;

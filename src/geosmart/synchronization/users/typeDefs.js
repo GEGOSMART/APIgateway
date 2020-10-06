@@ -18,6 +18,6 @@ export const usersMutations = `
     disconnect(nickname: Nickname!): String!
     joinRoom(nicknameRoom: NicknameRoom!): String!
     leaveRoom(nickname: Nickname!): String!
-    sendData(nicknameKeyData: NicknameKeyData!): String!
-    addData(nicknameKeyData: NicknameKeyData!): String!
+    sendUserData(nicknameKeyData: NicknameKeyData!): String!
+    addUserData(nicknameKeyData: NicknameKeyData!): String!
 `;
