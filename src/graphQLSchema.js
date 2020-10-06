@@ -70,6 +70,13 @@ import {
   scoreTypeDef
 } from './geosmart/information/score/typeDefs';
 
+//newQuestion typeDefs
+
+import{
+  questionTypeDef,
+  questionQueries,
+  questionMutations,
+} from './geosmart/newQuestion/question/typeDefs';
 
 // geosupport resolvers
 
@@ -92,6 +99,10 @@ import gameResolvers from './geosmart/geogames/questions/resolver';
 //information resolvers
 import scoreResolvers from './geosmart/information/score/resolvers';
 
+//newQuestion
+
+import questionResolvers from './geosmart/information/score/resolvers';
+
 // merge the typeDefs
 const mergedTypeDefs = mergeSchemas(
   [
@@ -109,8 +120,9 @@ const mergedTypeDefs = mergeSchemas(
     //geogames
     gamesTypeDef,
     //information
-    scoreTypeDef
-    //...
+    scoreTypeDef,
+    //newQuestion
+    questionTypeDef
   ],
   [
     // geosupport
@@ -125,8 +137,9 @@ const mergedTypeDefs = mergeSchemas(
     //geogames
     gameQueries,
     //information
-    scoreQueries
-    //..
+    scoreQueries,
+    //newQuestion
+    questionQueries
   ],
   [
     // geosupport
@@ -140,7 +153,9 @@ const mergedTypeDefs = mergeSchemas(
     userMutations,
     guestMutations,
     //information
-    scoreMutations
+    scoreMutations,
+    //newQuestion
+    questionMutations,
   ]
 );
 
@@ -162,6 +177,8 @@ export default makeExecutableSchema({
     // geogames
     gameResolvers,
     //information
-    scoreResolvers
+    scoreResolvers,
+    //newQuestion
+    questionResolvers
   ),
 });
