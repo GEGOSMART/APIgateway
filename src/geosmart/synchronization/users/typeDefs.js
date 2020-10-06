@@ -1,15 +1,15 @@
 export const usersTypeDef = `
   input Nickname {
-    "nickname": String!
+    nickname: String!
   }
   input NicknameRoom {
-    "nickname": String!
-    "roomName": String!
+    nickname: String!
+    roomName: String!
   }
   input NicknameKeyData {
-    "nickname": String!
-    "key": String!
-    "data": String!
+    nickname: String!
+    key: String!
+    data: String!
   }`;
 
 export const usersQueries = ``;

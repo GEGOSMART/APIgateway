@@ -1,8 +1,8 @@
 export const roomsTypeDef = `
   input RoomInput {
-    "roomName": String!
-    "key": String!
-    "data": JSON!
+    roomName: String!
+    key: String!
+    data: JSON!
   }`;
 
 export const roomsQueries = ``;
