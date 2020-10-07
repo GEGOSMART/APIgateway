@@ -55,27 +55,25 @@ import {
   guestTypeDef,
 } from './geosmart/userManagement/guest/typeDefs';
 
-
 // geogames typeDefs
 import {
   gameQueries,
   gamesTypeDef,
 } from './geosmart/geogames/questions/typeDefs';
 
-
 //information typeDefs
 import {
   scoreMutations,
   scoreQueries,
-  scoreTypeDef
+  scoreTypeDef,
 } from './geosmart/information/score/typeDefs';
 
 //newQuestion typeDefs
 
-import{
+import {
   questionMutations,
   questionQueries,
-  questionTypeDef
+  questionTypeDef,
 } from './geosmart/newQuestion/question/typeDefs';
 
 // geosupport resolvers
@@ -91,10 +89,8 @@ import placeResolvers from './geosmart/geosupport/places/resolvers';
 
 import userResolvers from './geosmart/userManagement/user/resolver';
 import guestResolvers from './geosmart/userManagement/guest/resolver';
-
 // geogames resolvers
 import gameResolvers from './geosmart/geogames/questions/resolver';
-
 
 //information resolvers
 import scoreResolvers from './geosmart/information/score/resolvers';
@@ -122,7 +118,7 @@ const mergedTypeDefs = mergeSchemas(
     //information
     scoreTypeDef,
     //newQuestion
-    questionTypeDef
+    questionTypeDef,
   ],
   [
     // geosupport
@@ -139,7 +135,7 @@ const mergedTypeDefs = mergeSchemas(
     //information
     scoreQueries,
     //newQuestion
-    questionQueries
+    questionQueries,
   ],
   [
     // geosupport
@@ -173,7 +169,7 @@ export default makeExecutableSchema({
     placeResolvers,
     // userManagement
     userResolvers,
-    userResolvers,
+    guestResolvers,
     // geogames
     gameResolvers,
     //information

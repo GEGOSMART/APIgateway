@@ -1,6 +1,6 @@
 export const questionTypeDef = `
     type Nquestion {
-        _id: String
+        _id: ID
         statement: String!
         image:    String!
         optionA:  String!
@@ -40,7 +40,7 @@ export const questionQueries = `
 `;
 
 export const questionMutations = `
-    createQuestion(nquestion: NquestionInput!): Res!
-    updateQuestion(id: Int!, nquestion: NquestionInput!): Res!
-    deleteQuestion(id: Int!): Res!
+    createQuestion(nquestion: NquestionInput!): String!
+    updateQuestion(id: ID!, nquestion: NquestionInput!): String!
+    deleteQuestion(id: ID!): String!
 `;

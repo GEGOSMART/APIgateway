@@ -8,3 +8,5 @@ const resolvers = {
     loginGuest: (_, { guest }) => generalRequest(`${URL}`, 'POST', guest),
   },
 };
+
+export default resolvers;

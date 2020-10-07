@@ -1,3 +1,3 @@
-export const url  = "172.17.0.1";
-export const port = "3000";
-export const entryPoint = "mNewQ";
+export const url = '3.92.114.227';
+export const port = '3000';
+export const entryPoint = 'mNewQ';
