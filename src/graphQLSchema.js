@@ -68,6 +68,22 @@ import {
   scoreTypeDef,
 } from "./geosmart/information/score/typeDefs";
 
+//communication typeDefs
+import {
+  messagesQueries,
+  messagesTypeDef,
+} from './geosmart/communication/messages/typeDefs';
+
+import {
+  chatsQueries,
+  chatsTypeDef,
+} from './geosmart/communication/chats/typeDefs';
+
+import {
+  contactsQueries,
+  contactsTypeDef,
+} from './geosmart/communication/contacts/typeDefs';
+
 // Synchronization users
 import {
   usersMutations,
@@ -105,6 +121,11 @@ import scoreResolvers from "./geosmart/information/score/resolvers";
 import synchronizationRoomsResolvers from "./geosmart/synchronization/rooms/resolvers";
 import synchronizationUsersResolvers from "./geosmart/synchronization/users/resolvers";
 
+//communication resolvers
+import messagesResolvers from './geosmart/communication/messages/resolvers';
+import chatsResolvers from './geosmart/communication/chats/resolvers';
+import contactsResolvers from './geosmart/communication/contacts/resolvers';
+
 // merge the typeDefs
 const mergedTypeDefs = mergeSchemas(
   [
@@ -124,6 +145,10 @@ const mergedTypeDefs = mergeSchemas(
     gamesTypeDef,
     //information
     scoreTypeDef,
+    //communication
+    messagesTypeDef,
+    contactsTypeDef,
+    chatsTypeDef
     //Synchronization
     usersTypeDef,
     roomsTypeDef,
@@ -143,6 +168,10 @@ const mergedTypeDefs = mergeSchemas(
     gameQueries,
     //information
     scoreQueries,
+    //communication
+    messagesQueries,
+    contactsQueries,
+    chatsQueries
     //Synchronization
     usersQueries,
     roomsQueries,
@@ -186,6 +215,10 @@ export default makeExecutableSchema({
     gameResolvers,
     //information
     scoreResolvers,
+    //communication
+    messagesResolvers,
+    contactsResolvers,
+    chatsResolvers,
     //Synchronization
     synchronizationRoomsResolvers,
     synchronizationUsersResolvers
