@@ -148,7 +148,7 @@ const mergedTypeDefs = mergeSchemas(
     //communication
     messagesTypeDef,
     contactsTypeDef,
-    chatsTypeDef
+    chatsTypeDef,
     //Synchronization
     usersTypeDef,
     roomsTypeDef,
@@ -171,7 +171,7 @@ const mergedTypeDefs = mergeSchemas(
     //communication
     messagesQueries,
     contactsQueries,
-    chatsQueries
+    chatsQueries,
     //Synchronization
     usersQueries,
     roomsQueries,
