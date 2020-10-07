@@ -21,7 +21,7 @@ export const questionTypeDef = `
 
 export const questionQueries = `
       allQuestions: [Question_n]!
-      questionsById(id: Int!): Question_n!
+      questionsById(id: String!): Question_n!
   `;
 
 export const questionMutations = `
