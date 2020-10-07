@@ -86,17 +86,17 @@ import {
 import {
   questionQueries,
   questionTypeDef,
-} from "./geosmart/questions/questions_new/typeDefs";
+} from "./geosmart/questions_n/questions_new/typeDefs";
 
-import questionsResolvers from "./geosmart/questions/questions_new/resolver"
+import questionsResolvers from "./geosmart/questions_n/questions_new/resolver"
 
 import {
   triviaMutations,
   triviaQueries,
   triviaTypeDef,
-} from "./geosmart/questions/sessions/typeDefs";
+} from "./geosmart/questions_n/sessions/typeDefs";
 
-import triviaResolvers from "./geosmart/questions/sessions/resolvers"
+import triviaResolvers from "./geosmart/questions_n/sessions/resolvers"
 
 
 // geosupport resolvers
@@ -208,7 +208,7 @@ export default makeExecutableSchema({
     gameResolvers,
     //questions
     questionsResolvers,
-      triviaResolvers,
+    triviaResolvers,
     //information
     scoreResolvers,
     //Synchronization

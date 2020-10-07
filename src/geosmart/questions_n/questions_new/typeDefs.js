@@ -1,5 +1,5 @@
 export const questionTypeDef = `
-  type Question {
+  type Question_n {
     _id: String
     statement: String
     image:    String
@@ -20,8 +20,8 @@ export const questionTypeDef = `
 //preguntas: [Question]!
 
 export const questionQueries = `
-      allQuestions: [Question]!
-      questionsById(id: Int!): Question!
+      allQuestions: [Question_n]!
+      questionsById(id: Int!): Question_n!
   `;
 
 export const questionMutations = `

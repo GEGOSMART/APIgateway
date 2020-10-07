@@ -17,7 +17,7 @@ export const triviaTypeDef = `
   }`;
 
 export const triviaQueries = `
-       allTrivia: [Trivia]!
+       allTrivias: [Trivia]!
        triviaById(id: Int!): Trivia!
   `;
 
