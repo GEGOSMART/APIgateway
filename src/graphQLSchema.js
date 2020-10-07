@@ -244,7 +244,7 @@ export default makeExecutableSchema({
     //information
     scoreResolvers,
     //newQuestion
-    questionResolvers
+    questionResolvers,
     //communication
     messagesResolvers,
     contactsResolvers,
