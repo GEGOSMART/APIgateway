@@ -1,5 +1,5 @@
-export const url = '172.17.0.1';
-//export const url = 'ec2-34-239-167-212.compute-1.amazonaws.com';
+//export const url = '172.17.0.1';
+export const url = '54.198.239.79';
 export const port = '3000';
 export const entryPoint= 'begin_game';
 
