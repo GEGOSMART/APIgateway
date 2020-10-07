@@ -53,22 +53,33 @@ import {
 import {
   guestMutations,
   guestTypeDef,
-} from "./geosmart/userManagement/guest/typeDefs";
+} from './geosmart/userManagement/guest/typeDefs';
 
 // geogames typeDefs
+
 import {
   gameQueries,
   gamesTypeDef,
-} from "./geosmart/geogames/questions/typeDefs";
+} from './geosmart/geogames/questions/typeDefs';
 
 //information typeDefs
+
 import {
   scoreMutations,
   scoreQueries,
   scoreTypeDef,
-} from "./geosmart/information/score/typeDefs";
+} from './geosmart/information/score/typeDefs';
+
+//newQuestion typeDefs
+
+import {
+  questionMutations,
+  questionQueries,
+  questionTypeDef,
+} from './geosmart/newQuestion/question/typeDefs';
 
 //communication typeDefs
+
 import {
   messagesQueries,
   messagesTypeDef,
@@ -85,6 +96,7 @@ import {
 } from './geosmart/communication/contacts/typeDefs';
 
 // Synchronization users
+
 import {
   usersMutations,
   usersQueries,
@@ -92,6 +104,7 @@ import {
 } from "./geosmart/synchronization/users/typeDefs";
 
 // Synchronization rooms
+
 import {
   roomsMutations,
   roomsQueries,
@@ -99,6 +112,7 @@ import {
 } from "./geosmart/synchronization/rooms/typeDefs";
 
 // geosupport resolvers
+
 import colorResolvers from "./geosmart/geosupport/colors/resolvers";
 import color_flagResolvers from "./geosmart/geosupport/color_flags/resolvers";
 import countryResolvers from "./geosmart/geosupport/countries/resolvers";
@@ -108,23 +122,31 @@ import placeResolvers from "./geosmart/geosupport/places/resolvers";
 
 // userManagement resolvers
 
-import userResolvers from "./geosmart/userManagement/user/resolver";
-import guestResolvers from "./geosmart/userManagement/guest/resolver";
+import userResolvers from './geosmart/userManagement/user/resolver';
+import guestResolvers from './geosmart/userManagement/guest/resolver';
 
 // geogames resolvers
-import gameResolvers from "./geosmart/geogames/questions/resolver";
+
+import gameResolvers from './geosmart/geogames/questions/resolver';
 
 //information resolvers
+
 import scoreResolvers from "./geosmart/information/score/resolvers";
 
 //Synchronization resolvers
+
 import synchronizationRoomsResolvers from "./geosmart/synchronization/rooms/resolvers";
 import synchronizationUsersResolvers from "./geosmart/synchronization/users/resolvers";
 
 //communication resolvers
+
 import messagesResolvers from './geosmart/communication/messages/resolvers';
 import chatsResolvers from './geosmart/communication/chats/resolvers';
 import contactsResolvers from './geosmart/communication/contacts/resolvers';
+
+//newQuestion
+
+import questionResolvers from './geosmart/newQuestion/question/resolvers';
 
 // merge the typeDefs
 const mergedTypeDefs = mergeSchemas(
@@ -145,6 +167,8 @@ const mergedTypeDefs = mergeSchemas(
     gamesTypeDef,
     //information
     scoreTypeDef,
+    //newQuestion
+    questionTypeDef,
     //communication
     messagesTypeDef,
     contactsTypeDef,
@@ -168,6 +192,8 @@ const mergedTypeDefs = mergeSchemas(
     gameQueries,
     //information
     scoreQueries,
+    //newQuestion
+    questionQueries,
     //communication
     messagesQueries,
     contactsQueries,
@@ -190,6 +216,8 @@ const mergedTypeDefs = mergeSchemas(
     guestMutations,
     //information
     scoreMutations,
+    //newQuestion
+    questionMutations,
     //Synchronization
     usersMutations,
     roomsMutations,
@@ -210,11 +238,13 @@ export default makeExecutableSchema({
     placeResolvers,
     // userManagement
     userResolvers,
-    userResolvers,
+    guestResolvers,
     // geogames
     gameResolvers,
     //information
     scoreResolvers,
+    //newQuestion
+    questionResolvers
     //communication
     messagesResolvers,
     contactsResolvers,
