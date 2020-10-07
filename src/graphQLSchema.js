@@ -73,9 +73,9 @@ import {
 //newQuestion typeDefs
 
 import{
-  questionTypeDef,
-  questionQueries,
   questionMutations,
+  questionQueries,
+  questionTypeDef
 } from './geosmart/newQuestion/question/typeDefs';
 
 // geosupport resolvers
@@ -101,7 +101,7 @@ import scoreResolvers from './geosmart/information/score/resolvers';
 
 //newQuestion
 
-import questionResolvers from './geosmart/information/score/resolvers';
+import questionResolvers from './geosmart/newQuestion/question/resolvers';
 
 // merge the typeDefs
 const mergedTypeDefs = mergeSchemas(
