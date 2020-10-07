@@ -9,12 +9,12 @@ const resolvers = {
 
     },
     Mutation: {
-        createQuestion: (_, { question }) =>
-            generalRequest(`${URL}/`, 'POST', question),
+        createQuestion: (_, { nquestion }) =>
+            generalRequest(`${URL}/`, 'POST', nquestion),
         updateQuestion: (_, { id, question }) =>
-            generalRequest(`${URL}/`, 'PUT' , question),
+            generalRequest(`${URL}/`, 'PUT' , nquestion),
         deleteQuestion: (_, {id}) => 
-            generalRequest(`${URL}/`, `DELETE`, question)        
+            generalRequest(`${URL}/`, `DELETE`, nquestion)        
     }
 
 };
