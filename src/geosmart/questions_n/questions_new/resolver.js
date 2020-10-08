@@ -1,13 +1,13 @@
 import { generalRequest, getRequest, requestParseBody } from '../../../utilities';
-import { url, port, entryPointQuestions } from '../server';
+import { url, port, entryPointKuestions } from '../server';
 
-const URL = `http://${url}:${port}/${entryPointQuestions}`;
+const URL = `http://${url}:${port}/${entryPointKuestions}`;
 
 const resolvers = {
   Query: {
-    allQuestions: (_) =>
+    allKuestions: (_) =>
         getRequest(URL, '/all'),
-    questionsById: (_, { id }) =>
+    kuestionsById: (_, { id }) =>
         generalRequest(`${URL}/${id}`, 'GET'),
   },
   Mutation: {

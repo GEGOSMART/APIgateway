@@ -113,11 +113,11 @@ import {
 
 // questions typeDefs
 import {
-  questionQueries,
-  questionTypeDef,
+  kuestionQueries,
+  kuestionTypeDef,
 } from "./geosmart/questions_n/questions_new/typeDefs";
 
-import questionsResolvers from "./geosmart/questions_n/questions_new/resolver"
+import kuestionsResolvers from "./geosmart/questions_n/questions_new/resolver"
 
 import {
   triviaMutations,
@@ -182,7 +182,7 @@ const mergedTypeDefs = mergeSchemas(
     guestTypeDef,
     //geogames
     gamesTypeDef,
-    questionTypeDef,
+    kuestionTypeDef,
     triviaTypeDef,
     //information
     scoreTypeDef,
@@ -209,7 +209,7 @@ const mergedTypeDefs = mergeSchemas(
     userQueries,
     //geogames
     gameQueries,
-    questionQueries,
+    kuestionQueries,
     triviaQueries,
     //information
     scoreQueries,
@@ -264,7 +264,7 @@ export default makeExecutableSchema({
     // geogames
     gameResolvers,
     //questions
-    questionsResolvers,
+    kuestionsResolvers,
     triviaResolvers,
     //information
     scoreResolvers,
