@@ -1,4 +1,4 @@
-export const questionTypeDef = `
+export const kuestionTypeDef = `
   type Question_n {
     _id: String
     statement: String
@@ -19,11 +19,11 @@ export const questionTypeDef = `
 
 //preguntas: [Question]!
 
-export const questionQueries = `
-      allQuestions: [Question_n]!
-      questionsById(id: String!): Question_n!
+export const kuestionQueries = `
+      allKuestions: [Question_n]!
+      kuestionsById(id: String!): Question_n!
   `;
 
-export const questionMutations = `
+export const kuestionMutations = `
     
 `;
