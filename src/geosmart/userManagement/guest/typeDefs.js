@@ -3,11 +3,11 @@ export const guestTypeDef = `
     username: String!
   }
 
-  type Response {
+  type ResponseGuest {
      token: String!  
   }
 `;
 
 export const guestMutations = `
-  loginGuest(guest: GuestInput!): Response!
+  loginGuest(guest: GuestInput!): ResponseGuest!
 `;
