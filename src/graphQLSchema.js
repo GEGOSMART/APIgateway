@@ -111,6 +111,23 @@ import {
   roomsTypeDef,
 } from "./geosmart/synchronization/rooms/typeDefs";
 
+// questions typeDefs
+import {
+  questionQueries,
+  questionTypeDef,
+} from "./geosmart/questions_n/questions_new/typeDefs";
+
+import questionsResolvers from "./geosmart/questions_n/questions_new/resolver"
+
+import {
+  triviaMutations,
+  triviaQueries,
+  triviaTypeDef,
+} from "./geosmart/questions_n/sessions/typeDefs";
+
+import triviaResolvers from "./geosmart/questions_n/sessions/resolvers"
+
+
 // geosupport resolvers
 
 import colorResolvers from "./geosmart/geosupport/colors/resolvers";
@@ -165,6 +182,8 @@ const mergedTypeDefs = mergeSchemas(
     guestTypeDef,
     //geogames
     gamesTypeDef,
+    questionTypeDef,
+    triviaTypeDef,
     //information
     scoreTypeDef,
     //newQuestion
@@ -190,6 +209,8 @@ const mergedTypeDefs = mergeSchemas(
     userQueries,
     //geogames
     gameQueries,
+    questionQueries,
+    triviaQueries,
     //information
     scoreQueries,
     //newQuestion
@@ -214,6 +235,7 @@ const mergedTypeDefs = mergeSchemas(
     // userManagement
     userMutations,
     guestMutations,
+    triviaMutations,
     //information
     scoreMutations,
     //newQuestion
@@ -241,6 +263,9 @@ export default makeExecutableSchema({
     guestResolvers,
     // geogames
     gameResolvers,
+    //questions
+    questionsResolvers,
+    triviaResolvers,
     //information
     scoreResolvers,
     //newQuestion
