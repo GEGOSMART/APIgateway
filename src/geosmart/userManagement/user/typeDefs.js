@@ -8,6 +8,7 @@ export const userTypeDef = `
     country: String!
     profile_picture: String!
     created_at: String!
+    flag: String!
     token: String!
   }
   type Response {
@@ -19,7 +20,8 @@ export const userTypeDef = `
     username: String!
     password: String!
     country: String!
-    profile_picture: String
+    profile_picture: String!
+    flag: String!
 
   }
   input LoginUserInput {
@@ -34,6 +36,7 @@ export const userTypeDef = `
     new_password: String
     country: String
     profile_picture: String
+    flag: String
   }
 `;
 
