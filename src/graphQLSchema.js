@@ -81,16 +81,19 @@ import {
 //communication typeDefs
 
 import {
+  messagesMutations,
   messagesQueries,
   messagesTypeDef,
 } from './geosmart/communication/messages/typeDefs';
 
 import {
+  chatMutations,
   chatsQueries,
   chatsTypeDef,
 } from './geosmart/communication/chats/typeDefs';
 
 import {
+  contactsMutations,
   contactsQueries,
   contactsTypeDef,
 } from './geosmart/communication/contacts/typeDefs';
@@ -243,6 +246,10 @@ const mergedTypeDefs = mergeSchemas(
     //Synchronization
     usersMutations,
     roomsMutations,
+    //communication
+    chatMutations,
+    messagesMutations,
+    contactsMutations,
   ]
 );
 
