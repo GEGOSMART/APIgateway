@@ -1,18 +1,24 @@
 export const contactsTypeDef = `
   type Contact {
-      id: Int!
-      user: String!
-      message: String!
-      chat: String!
+      username: String!
+      firstname: String!
+      lastname: String!
+      friends: [String]
   }
   input ContactInput {
-    user: String!
-    message: String!
-    chat: String!
+    username: String!
+    firstname: String!
+    lastname: String!
+    friends: [String]
   }`;
 
 export const contactsQueries = `
       allContacts: [Contact]!
   `;
 
+export const contactsMutations = `
+      createContact(contact: ContactInput!): Contact!
+      updateContact(username: String!, contact: ContactInput!): Contact!
+      deleteContact(username: String!): Int
+`;
 
