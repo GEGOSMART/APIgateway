@@ -55,6 +55,11 @@ import {
   guestTypeDef,
 } from './geosmart/userManagement/guest/typeDefs';
 
+import { 
+  tokenQueries,
+  tokenTypeDef 
+} from "./geosmart/userManagement/token/typeDefs";
+
 // geogames typeDefs
 
 import {
@@ -144,6 +149,7 @@ import placeResolvers from "./geosmart/geosupport/places/resolvers";
 
 import userResolvers from './geosmart/userManagement/user/resolver';
 import guestResolvers from './geosmart/userManagement/guest/resolver';
+import tokenResolvers from './geosmart/userManagement/token/resolver';
 
 // geogames resolvers
 
@@ -183,6 +189,7 @@ const mergedTypeDefs = mergeSchemas(
     // userManagement
     userTypeDef,
     guestTypeDef,
+    tokenTypeDef,
     //geogames
     gamesTypeDef,
     kuestionTypeDef,
@@ -210,6 +217,7 @@ const mergedTypeDefs = mergeSchemas(
     placeQueries,
     // userManagement
     userQueries,
+    tokenQueries,
     //geogames
     gameQueries,
     kuestionQueries,
@@ -268,6 +276,7 @@ export default makeExecutableSchema({
     // userManagement
     userResolvers,
     guestResolvers,
+    tokenResolvers,
     // geogames
     gameResolvers,
     //questions
