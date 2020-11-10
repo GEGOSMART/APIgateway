@@ -9,7 +9,6 @@ RUN npm install
 
 # Bundle app source
 COPY . /geosmart_api/
-RUN source .env
 RUN npm run prepublish
 
 CMD [ "npm", "run", "runServer" ]
