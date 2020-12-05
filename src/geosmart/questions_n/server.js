@@ -1,4 +1,4 @@
-export const url = '35.222.72.147';
+export const url = '34.206.124.229';
 export const port = '5004';
 export const entryPointSession= 'trivia';
 export const entryPointKuestions= 'preguntas';

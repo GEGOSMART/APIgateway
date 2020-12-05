@@ -1,3 +1,3 @@
-export const url = '35.174.123.91'
+export const url = '34.206.124.229'
 export const port = '2000'
 export const entryPoint = ''
